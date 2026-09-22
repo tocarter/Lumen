@@ -1,5 +1,7 @@
 # Lumen
 
+An app that can connect school platforms to your workspace, and help plan things out.
+
 A dark assignment board for Schoology and Canvas. Recolored Slates chrome, Lumen name, no tutor.
 
 - **Web** (`web/`): Next.js board, calendar, Settings, Focus popout. This is what Vercel hosts.

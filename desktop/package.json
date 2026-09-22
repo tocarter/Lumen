@@ -1,0 +1,19 @@
+{
+  "name": "lumen-desktop",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "main": "main.mjs",
+  "scripts": {
+    "start": "electron .",
+    "dev": "LUMEN_ATTACH=1 electron .",
+    "build:web": "npm --prefix ../web run build",
+    "dist": "npm run build:web && electron-builder --config electron-builder.config.cjs --publish never",
+    "dist:mac": "npm run build:web && electron-builder --mac --config electron-builder.config.cjs --publish never",
+    "dist:win": "npm run build:web && electron-builder --win --config electron-builder.config.cjs --publish never"
+  },
+  "devDependencies": {
+    "electron": "^34.2.0",
+    "electron-builder": "^25.1.8"
+  }
+}

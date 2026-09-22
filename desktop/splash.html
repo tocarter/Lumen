@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Lumen</title>
+    <style>
+      :root {
+        --bg: #0c0e10;
+        --paper: #161b21;
+        --ink: #eef3f1;
+        --muted: #6d7a76;
+        --gold: #d4a24a;
+        --line: rgba(238, 243, 241, 0.08);
+      }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; margin: 0; }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: ui-sans-serif, system-ui, sans-serif;
+        -webkit-app-region: drag;
+        user-select: none;
+      }
+      .title { font-size: 22px; letter-spacing: -0.03em; }
+      .note { color: var(--muted); font-size: 13px; min-height: 18px; }
+      .bar {
+        width: 240px;
+        height: 3px;
+        border-radius: 99px;
+        background: var(--line);
+        overflow: hidden;
+      }
+      .bar::after {
+        content: "";
+        display: block;
+        width: 40%;
+        height: 100%;
+        background: var(--gold);
+        animation: sweep 1.2s ease-in-out infinite;
+      }
+      @keyframes sweep {
+        from { transform: translateX(-120%); }
+        to { transform: translateX(340%); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title">Starting Lumen</div>
+    <div class="bar"></div>
+    <p class="note" id="note">This takes a moment on a cold start.</p>
+    <script>
+      window.lumenBoot = {
+        step() {},
+        note(text) { document.getElementById("note").textContent = text || ""; },
+        done() { document.getElementById("note").textContent = "Ready."; },
+        failed(message) { document.getElementById("note").textContent = message || "Something didn't start."; },
+      };
+    </script>
+  </body>
+</html>

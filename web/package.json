@@ -1,0 +1,33 @@
+{
+  "name": "lumen",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "dev:mobile": "next dev -H 0.0.0.0 -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "start:mobile": "next start -H 0.0.0.0 -p 3000",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@capacitor/app": "^8.1.1",
+    "@capacitor/app-launcher": "^8.0.1",
+    "@capacitor/core": "^8.5.1",
+    "@capacitor/keyboard": "^8.0.1",
+    "@capacitor/local-notifications": "^8.3.1",
+    "@capacitor/network": "^8.0.1",
+    "next": "16.3.3",
+    "next-auth": "5.0.0-beta.30",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.3",
+    "typescript": "^5"
+  }
+}

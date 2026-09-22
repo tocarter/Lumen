@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f4efe6" />
+    <title>Connect Lumen</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: ui-sans-serif, system-ui, sans-serif;
+        background: #f4efe6;
+        color: #1c1915;
+      }
+      * { box-sizing: border-box; }
+      body {
+        min-height: 100dvh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        background: #f4efe6;
+      }
+      main { width: min(100%, 420px); text-align: center; }
+      img { width: 78px; height: 78px; border-radius: 20px; }
+      h1 { margin: 20px 0 8px; font-size: 26px; }
+      p { margin: 0; color: #5c564c; font-size: 14px; line-height: 1.55; }
+      section {
+        margin-top: 24px;
+        padding: 17px;
+        border: 1px solid rgba(28,25,21,.1);
+        border-radius: 16px;
+        background: #fbf7f0;
+        text-align: left;
+      }
+      code { font-size: 12px; overflow-wrap: anywhere; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img src="assets/lumen-icon.png" alt="" />
+      <h1>Lumen needs its host</h1>
+      <p>
+        This native shell is installed, but no Lumen server URL was configured.
+        The app talks to the Next.js portal on your computer, not to Schoology or Canvas directly.
+      </p>
+      <section>
+        <strong>Connect this build</strong>
+        <p><code>LUMEN_MOBILE_SERVER_URL=http://YOUR-MAC-IP:3000 npm run sync</code></p>
+      </section>
+    </main>
+  </body>
+</html>
